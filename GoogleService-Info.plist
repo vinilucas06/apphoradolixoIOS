@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>211737854919-p0dk5c7497q4vp2219nakt4j86456aab.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.211737854919-p0dk5c7497q4vp2219nakt4j86456aab</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAvmjKZC3ZlnOoVokd6p26cEY_I7qrHTOM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>211737854919</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.horadolixo.app.new</string>
+	<key>PROJECT_ID</key>
+	<string>horadolixoios</string>
+	<key>STORAGE_BUCKET</key>
+	<string>horadolixoios.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:211737854919:ios:4f9a346c6b12508dfa4fe2</string>
+	<key>DATABASE_URL</key>
+	<string>https://horadolixoios.firebaseio.com</string>
+</dict>
+</plist>

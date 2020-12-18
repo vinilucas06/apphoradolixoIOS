@@ -1,0 +1,9 @@
+####ANDROID#####
+ nome: com.horadolixo.app.horadolixo 
+ versão:2.0.23
+ #####IOS######
+ nome: com.horadolixo.app.new 
+ com.horadolixo.app.new
+ versão: 0.0.3
+
+    <plugin name="cordova-plugin-firebasex" spec="latest" />

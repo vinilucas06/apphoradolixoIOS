@@ -1,0 +1,37 @@
+<ion-content fullscreen overflow-scroll="true">
+  <div style="width: 100%; text-align: center;background-color: #4cb050;">
+    <img alt="logo" width="30%" src="assets/imgs/icon_02.png">
+  </div>
+  <hr>
+  <div style="width: 100%; text-align: center;">Olá, seja bem vindo!</div>
+  <br>
+  <div style="width: 100%; text-align: center;">Já possui o seu cadastro?</div>
+
+
+  <form [formGroup]="form" (ngSubmit)="login(form.value)">
+    <ion-item lines="full">
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="text" required formControlName="login"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" required formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="success" expand="block">Entrar</ion-button>
+        <br>
+        <div style="width: 100%; text-align: center;">
+          <a (click)="abrirEsqueceuSenha()" class="small-text">Esqueceu sua senha?</a>
+        </div>
+      </ion-col>
+    </ion-row>
+    <br>
+    <div style="width: 100%; text-align: center;">
+      Ainda não possui seu cadastro?<br>
+      <a [routerLink]="['/cadastro']" class="small-text">Crie sua conta agora!</a>
+    </div>
+
+  </form>
+</ion-content>
