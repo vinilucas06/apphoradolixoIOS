@@ -14,6 +14,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 //import { FCM } from '@ionic-native/fcm/ngx';
 import { Socket } from 'ngx-socket-io';
 import { webSocket, WebSocketSubjectConfig } from "rxjs/webSocket";
+import { FirebaseX } from '@ionic-native/firebase-x/ngx';
 
 @Component({
   selector: 'app-root',
@@ -72,7 +73,7 @@ export class AppComponent implements OnInit {
     private auth: AuthenticationService,
     public iab: InAppBrowser,
     private localNotifications: LocalNotifications,
-    // public firebaseX: FirebaseX,
+     public firebaseX: FirebaseX,
     //private firebase: Firebase,
     public alertController: AlertController,
     public geolocation: Geolocation,
@@ -110,14 +111,14 @@ export class AppComponent implements OnInit {
       this.inializeFCM();
       this.iniciarListenerDeNotificacoes();
       this.inializeGeo();
-      this.inicializarNotificacao();
+    //  this.inicializarNotificacaoLOCAL();NOTIFICAÇÃO LOCAL
 
     });
 
 
   }
 
-  inicializarNotificacao(){
+  inicializarNotificacaoLOCAL(){
     this.localNotifications.schedule({
       text: 'seja bem vindo!',
      // trigger: {at: new Date(new Date().getTime() + 3600)},
@@ -193,11 +194,11 @@ export class AppComponent implements OnInit {
   }
 
   inializeFCM() {
-    // // this.firebase.getToken().then(token => {alert(token); this.token = token;});
-    // this.firebaseX.onMessageReceived().subscribe(data => {
-    //   //var myJSON = JSON.stringify(data.title);
-    //   this.presentAlert(data.title, data.body);
-    // });
+    // this.firebase.getToken().then(token => {alert(token); this.token = token;});
+    this.firebaseX.onMessageReceived().subscribe(data => {
+      //var myJSON = JSON.stringify(data.title);
+      this.presentAlert(data.title, data.body);
+    });
   }
 
   async presentAlert(header, text) {

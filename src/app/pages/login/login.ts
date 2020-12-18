@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario/usuario.service';
 import { ModalController, AlertController } from '@ionic/angular';
 import { EsqueceuSenhaModal } from 'src/app/modals/esqueceusenha/esqueceusenha';
+import { FirebaseX } from '@ionic-native/firebase-x/ngx';
 
 
 @Component({
@@ -26,6 +27,7 @@ export class LoginPage implements OnInit {
         private usuarioService: UsuarioService,
         public modalController: ModalController,
       //  private firebase: Firebase,
+      public firebase: FirebaseX,
         public alertController: AlertController) {
         this.form = this.fb.group({
             login: ['', Validators.required],
@@ -59,12 +61,12 @@ export class LoginPage implements OnInit {
                         notification_status_days: "1,1,1,1,1,1,1"
                     };
                   
-           //         this.firebase.getToken().then(token => {
-
+                   this.firebase.getToken().then(token => {
+                    modelToken.token_value = token;
                        this.usuarioService.CadastrarToken(modelToken).subscribe(data => {
 
                         });
-                  //  });
+                   });
                     this.routerComponent.navigate(['/home']);
                 });
 

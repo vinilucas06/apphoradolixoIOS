@@ -20,7 +20,7 @@ import { SuportePage } from './pages/suporte/suporte';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-//import { FirebaseX } from "@ionic-native/firebase-x/ngx";
+import { FirebaseX } from "@ionic-native/firebase-x/ngx";
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { EsqueceuSenhaModal } from './modals/esqueceusenha/esqueceusenha';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -62,7 +62,7 @@ library.add(fas);
   ],
   providers: [
     Geolocation,
-    //FirebaseX,
+    FirebaseX,
     LocalNotifications,
     InAppBrowser,
     StatusBar,
